@@ -7,6 +7,10 @@
                 height: 100%;
                 width: 100%;
                 font-family: Nunito;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column; /* Make the body column */
             }
           
             /* UTILITY */
@@ -51,22 +55,42 @@
             }
 
             .PolaroidCard{ 
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
-                justify-content: center;
-                
+                display: grid; /* Use grid layout */
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+                gap: 10px; /* Space between items */
+                max-width: 400px; /* Max width of the grid */
+                width: 100%; /* Full width for responsiveness */
+                padding: 200px; /* Add some padding around the grid */
+                grid-row-gap: 5px; /* Set vertical gap to match horizontal gap */
             }
             .Polaroid {
-                display: flex;
-                flex-direction: column; /* Stack items vertically */
-                align-items: center; /* Center align items */
-                margin: 10px; /* space between Polaroids */
+            position: relative; /* Set relative positioning for absolute children */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center align items */
+            margin: 0; /* Remove margin for Polaroids */
+            background-color: white; /* Add a background color to Polaroids */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add some shadow for depth */
+            border-radius: 8px; /* Rounded corners */
+            max-width: 100.91px;
+            max-height: 126.77px; /* Add px for max-height */
+        }
+
+            .icon {
+                position: absolute; /* Position the icon absolutely */
+                top: 5px; 
+                right: 5px; 
+                width: 20px; 
+                height: 20px; 
+                z-index: 1; /* Ensure the icon appears above other elements */
             }
+
 
             .Title {
                 text-align: center; /* Center text */
                 margin-top: 8px; /* Space between image and text */
+                white-space: nowrap;
+                font-weight: 500;
             }
         </style>
     </head>
@@ -84,6 +108,30 @@
             </div>
             <p class="Title">Death Cap</p>
         </div>
+
+        <div class="Polaroid">
+            <div class="image">
+                <img width="100.91px" height="126.77px" class="" src="assets/Destroyting_Angel.png"></img>
+                <img class="icon" src="assets/Warning.png" alt="Icon" />
+            </div>
+            <p class="Title">Destroying Angel</p>
+        </div>
+
+        
+        <div class="Polaroid">
+            <div class="image">
+                <img width="100.91px" height="126.77px" class="" src="assets/False_Death_Cap.png"></img>
+            </div>
+            <p class="Title">False Death Cap</p>
+        </div>
+
+        <div class="Polaroid">
+            <div class="image">
+                <img width="100.91px" height="126.77px" class="" src="assets/Puffball.png"></img>
+            </div>
+            <p class="Title">Puffball</p>
+        </div>
+
         
 
     </body>
