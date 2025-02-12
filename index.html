@@ -1,123 +1,111 @@
 <!-- AN HTML COMMENT -->
 <html>
-    <head>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-            html, body{
-                height: 100%;
-                width: 100%;
-                font-family: Nunito;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column; 
-            }
-          
-            /* UTILITY */
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+        html, body {
+            height: 100%;
+            width: 100%;
+            font-family: Nunito;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+        }
 
-            .polaroid-card{ 
-                display: grid; /* Use grid layout */
-                grid-template-columns: repeat(3, 1fr); /* 3 columns */
-                gap: 10px; 
-                max-width: 400px; 
-                width: 100%; 
-                padding: 200px; 
-                grid-row-gap: 5px; 
-            }
-            .polaroid {
-                position: relative; /* Set relative positioning for absolute children */
-                display: flex;
-                flex-direction: column; /* Stack items vertically */
-                align-items: center; 
-                margin: 0; 
-                background-color: white; 
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-                border-radius: 8px; /* Rounded corners */
-                max-width: 100.91px;
-                max-height: 126.77px; 
-            }
+        /* Container for the grid */
+        .polaroid-container {
+            display: grid; /* Use grid layout */
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 18px; 
+            max-width: 100px; /* Max width for the grid container */
+            max-height: 400px;
+            width: 100%; 
+            padding: 10px; 
+        }
 
-            .icon {
-                position: absolute; /* Position the icon absolutely */
-                top: 5px; 
-                left: 5px; 
-                width: 20px; 
-                height: 20px; 
-                z-index: 1; /* Ensure the icon appears above other elements */
-            }
+        .polaroid {
+            position: relative; /* Set relative positioning for absolute children */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; 
+            background-color: white; 
+            box-shadow: 0 4px 2px rgba(0,0,0,0.1); 
+            /*border-radius: 8px; /* Rounded corners */
+            /* Increased dimensions slightly */
+            width: 100.91px;  /* Adjusted width */
+            height: 126.77px; /* Adjusted height */
+            margin-left: 18px;
+            margin-bottom: 67px;
+        }
 
-            .title {
-                text-align: center; /* Center text */
-                margin-top: 8px; /* Space between image and text */
-                white-space: nowrap;
-                font-weight: 500;
-            }
+        .icon {
+            position: absolute; /* Position the icon absolutely */
+            top: 5px; 
+            left: 5px; 
+            width: 20px; 
+            height: 20px; 
+            z-index: 1; /* Ensure the icon appears above other elements */
+        }
 
-            .image {
-                width: 100.91px;
-                height: 126.77px;
-            }
-        </style>
-    </head>
+        .title {
+            text-align: center; /* Center text */
+            margin-top: 11px; /* Space between image and text */
+            white-space: nowrap;
+            font-weight: 500;
+            margin-bottom: 33px;
+        }
 
-    <body> 
+        .image {
+            /* Adjusted dimensions to be slightly smaller than the polaroid */
+            width: 100.91px;   /* Adjusted width */
+            height: 126.77px;  /* Adjusted height */
+        }
 
-        <ul>
-        <li>
-        <div class="polaroid-card">
-            <div class="polaroid">
-                <div class="image">
-                    <img class="" src="assets/Death_Cap2.png" alt="Death Cap">
-                </div>
-                <p class="title">Death Cap</p>
+        .image img {
+            width: 100.91px; /* Ensure image fills the container */
+            height: 100%; /* Ensure image fills the container */
+            border-radius: 8px; /* Optional: to match the container's rounded corners */
+        }
+    </style>
+</head>
+
+<body> 
+    <div class="polaroid-container">
+        <div class="polaroid">
+            <div class="image">
+                <img src="assets/Death_Cap2.png" alt="Death Cap">
             </div>
+            <p class="title">Death Cap</p>
         </div>
-    </li>
 
-    <li>
-        <div class="polaroid-card">
-            <div class="polaroid">
-                <div class="image">
-                    <img class="" src="assets/Paddy_Straw2.png" alt="Paddy Straw">
-                </div>
-                <p class="title">Paddy Straw</p>
+        <div class="polaroid">
+            <div class="image">
+                <img src="assets/Paddy_Straw2.png" alt="Paddy Straw">
             </div>
+            <p class="title">Paddy Straw</p>
         </div>
-    </li>
 
-    <li>
-        <div class="polaroid-card">
-            <div class="polaroid">
-                <div class="image">
-                    <img class="" src="assets/Destroying_Angel2.png" alt="Destroying Angel">
-                </div>
-                <p class="title">Destroying Angel</p>
+        <div class="polaroid">
+            <div class="image">
+                <img src="assets/Destroying_Angel2.png" alt="Destroying Angel">
             </div>
+            <p class="title">Destroying Angel</p>
         </div>
-    </li>
 
-    <li>
-        <div class="polaroid-card">
-            <div class="polaroid">
-                <div class="image">
-                    <img class="" src="assets/False_Death_Cap2.png" alt="False Death Cap">
-                </div>
-                <p class="title">False Death Cap</p>
+        <div class="polaroid">
+            <div class="image">
+                <img src="assets/False_Death_Cap2.png" alt="False Death Cap">
             </div>
+            <p class="title">False Death Cap</p>
         </div>
-    </li>
 
-    <li>
-        <div class="polaroid-card">
-            <div class="polaroid">
-                <div class="image">
-                    <img class="" src="assets/PuffBall2.png" alt="Puffball">
-                </div>
-                <p class="title">Puffball</p>
+        <div class="polaroid">
+            <div class="image">
+                <img src="assets/PuffBall2.png" alt="Puffball">
             </div>
+            <p class="title">Puffball</p>
         </div>
-    </li>
-
-    </ul>
-    </body>
+    </div>
+</body>
 </html>
